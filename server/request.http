@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "viet",
+    "password": "1233333"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "vietgioihoa3",
+    "password": "1233333"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIxOTRkNjA2MmQ4NzYzNTUxYjk5ODYiLCJpYXQiOjE2NTYwODAxMzJ9.nax2RkCmVSw7RRod_S_HtsG4QoRWonUM5Z99DTEDsxU
+
+{
+    "title": "PHP",
+    "description": "PHP BASIC",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIxZGMyNmVlOTE2M2M1YzM2MmQ0Y2EiLCJpYXQiOjE2NTU4MjMzOTh9.b8P8Noj36QboKAdUMldVuMwxdOXepPw7qABtiaDqWYE
+
+###
+
+PUT http://localhost:5000/api/posts/62b2baf37613a04e7f054e54
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIxZGMyNmVlOTE2M2M1YzM2MmQ0Y2EiLCJpYXQiOjE2NTU4MjMzOTh9.b8P8Noj36QboKAdUMldVuMwxdOXepPw7qABtiaDqWYE
+
+{
+    "title": "Nodejs",
+    "description": "Nodejs basic",
+    "url": "facebook.com",
+    "status": ""
+}
+
+###
+DELETE http://localhost:5000/api/posts/62b2baf37613a04e7f054e54
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIxZGMyNmVlOTE2M2M1YzM2MmQ0Y2EiLCJpYXQiOjE2NTU4MjMzOTh9.b8P8Noj36QboKAdUMldVuMwxdOXepPw7qABtiaDqWYE
