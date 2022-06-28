@@ -16,7 +16,6 @@ function UpdatePostModal() {
     //State
 
     const { display, id } = showUpdatePostModal
-
     const [newPost, setNewPost] = useState({
         title: post?.title,
         description: post?.description,

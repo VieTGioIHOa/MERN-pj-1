@@ -85,7 +85,7 @@ export default function Dashboard() {
                 <div className="h-screen overflow-auto pb-5">
                     {body}
                     <CreatePostModal />
-                    <UpdatePostModal />
+                    {postState.post !== null && <UpdatePostModal />}
                     <ToastMessage delay='3000' />
                 </div>
                 : Navigate('/login')
