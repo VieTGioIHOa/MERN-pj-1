@@ -1,7 +1,7 @@
 export const apiUrl =
     process.env.NODE_ENV !== 'production'
         ? 'http://localhost:5000/api'
-        : 'anyUrl'
+        : 'https://pacific-plains-81115.herokuapp.com'
 
 export const LOCAL_STORAGE_TOKEN_NAME = 'mern-stack'
 export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS'
