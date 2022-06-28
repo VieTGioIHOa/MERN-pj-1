@@ -22,11 +22,13 @@ connectDB()
 
 const app = express()
 
+app.use(cors())
+
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    //Enabling CORS
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
     next();
 });
 
@@ -36,7 +38,6 @@ app.use(express.urlencoded({
     extended: true,
 }))
 
-app.use(cors())
 
 app.use('/api/auth', authRouter)
 app.use('/api/posts', postRouter)
