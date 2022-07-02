@@ -34,16 +34,20 @@ app.use(function (req, res, next) {
 
 app.use(express.json())
 
+
 app.use(express.urlencoded({
     extended: true,
 }))
 
 
+app.get('/', (req, res) => {
+    res.send('APP RUNNING....')
+})
 app.use('/api/auth', authRouter)
 app.use('/api/posts', postRouter)
 
-const POST = process.env.POST || 5000
+const PORT = process.env.PORT || 5000
 
-app.listen(POST, () => {
-    console.log(`Server running on ${POST}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on ${PORT}`);
 })
